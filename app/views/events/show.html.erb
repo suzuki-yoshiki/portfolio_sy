@@ -1,0 +1,36 @@
+<% provide(:title, 'Event Show') %>
+<h1>イベント詳細</h1>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="table table-bordered" id="table-schedule">
+        <tbody>
+          <tr>
+            <th class="active center">
+              <p>
+              <span><%= Event.human_attribute_name :start_date %></span>
+              <span><td class="active"><%= l(@event.start_date, format: :short, default: '-') %><%= "~" %></span></td>
+              <br><th class="active center"><span><%= Event.human_attribute_name :end_date %></span></th>
+              <span><td class="active"><%= l(@event.end_date, format: :short, default: '-') %></span></td>
+              </p>
+            </th>
+          </tr>
+          <tr>
+            <th class="active center col-md-2"><%= Event.human_attribute_name :title %></th>
+            <td  class="active" colspan = "3"><%= @event.title %></td>
+          </tr>
+          <tr>
+            <th class="active center"><%= Event.human_attribute_name :body %></th>
+            <td  class="active" colspan = "3">
+              <%= @event.body %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <%= link_to '戻る', events_path, class: "btn btn-lg btn-default" %>
+        <%= link_to "編集", edit_event_path(@event), class: "btn btn-lg btn-success" %>
+        <%= link_to "削除", event_path(id:@event.id), method: :delete,
+        data: { confirm: "「#{@event.title}」を削除します。よろしいですか？" }, class: "btn btn-lg btn-danger" %>
+      </div>
+    </div>    
+  </div>

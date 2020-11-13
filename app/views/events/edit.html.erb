@@ -1,0 +1,7 @@
+<% provide(:title, 'Event Edit') %>
+<h1>イベント編集</h1>
+
+<%= render 'form', event: @event %>
+
+<%= link_to '詳細', @event, class: "btn btn-lg btn-warning" %> |
+<%= link_to '戻る', events_path, class: "btn btn-lg btn-default" %>

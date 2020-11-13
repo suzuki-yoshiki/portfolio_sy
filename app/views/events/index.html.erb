@@ -1,0 +1,25 @@
+<% provide(:title, 'Event Index') %>
+<div class="row">
+ <p>イベント</p>
+  <div id="calendar" class="col-md-6">
+  </div>
+<div class="col-md-6">
+  <table>
+    <tbody>
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">イベントに参加</a>
+            </h4>
+          </div>
+          <div id="collapse3" class="panel-collapse collapse">
+            <div class="panel-body">
+              <%= render 'form', event: @event %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </tbody>
+  </table>
+</div>
