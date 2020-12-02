@@ -24,6 +24,8 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 #facebookログイン
 gem 'omniauth-facebook'
+#twitterログイン
+gem 'omniauth-twitter'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -38,6 +40,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+gem 'therubyracer'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

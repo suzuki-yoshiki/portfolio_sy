@@ -18,19 +18,25 @@ class User < ApplicationRecord
     end
     user
   end
-  #facebookログインメソッド
-  def self.find_for_oauth(auth)
+  
+  def self.find_for_oauth(auth) # facebook, twitter ログイン用メソッドです
     user = User.where(uid: auth.uid, provider: auth.provider).first
- 
     unless user
       user = User.create(
         uid:      auth.uid,
         provider: auth.provider,
-        email:    auth.info.email,
+        email:    User.dummy_email(auth),
+        name:  auth.info.name,
         password: Devise.friendly_token[0, 20]
       )
     end
- 
     user
   end
+
+  private
+
+    def self.dummy_email(auth)  # facebook, twitter ログイン用メソッドです
+      "#{auth.uid}-#{auth.provider}@example.com"
+    end
+
 end
