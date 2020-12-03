@@ -20,12 +20,12 @@ gem 'devise-i18n-views'
 
 gem 'dotenv-rails'
 gem 'omniauth'
-#googleログイン
-gem 'omniauth-google-oauth2'
-#facebookログイン
-gem 'omniauth-facebook'
-#twitterログイン
-gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2', '~> 0.8.0'#googleログイン
+gem 'omniauth-facebook'#facebookログイン
+gem 'omniauth-twitter'#twitterログイン
+gem 'omniauth-instagram'#instagramログイン
+gem 'dotenv-rails'
+gem 'omniauth-line'#lineログイン
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes

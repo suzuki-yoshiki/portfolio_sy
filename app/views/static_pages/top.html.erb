@@ -5,8 +5,8 @@
   <%= current_user.email %>
 <% end %>
 
-<%= link_to 'Google+', user_google_omniauth_authorize_path, class:"Button-style" %>
-<%= link_to 'Facebook+', user_facebook_omniauth_authorize_path, class:"Button-style" %>
+<%= link_to 'Google+', user_google_oauth2_omniauth_authorize_path, method: :post, class:"Button-style" %>
+<%= link_to 'Facebook+', user_facebook_omniauth_authorize_path, method: :post, class:"Button-style" %>
 
 <fb:login-button 
   scope="public_profile,email"

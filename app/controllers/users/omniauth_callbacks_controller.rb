@@ -7,7 +7,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   # callback for google
-  def google
+  def google_oauth2
     callback_from(:google)
   end
 
