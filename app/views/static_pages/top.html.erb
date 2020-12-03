@@ -7,6 +7,7 @@
 
 <%= link_to 'Google+', user_google_omniauth_authorize_path, class:"Button-style" %>
 <%= link_to 'Facebook+', user_facebook_omniauth_authorize_path, class:"Button-style" %>
+
 <fb:login-button 
   scope="public_profile,email"
   onlogin="checkLoginState();">

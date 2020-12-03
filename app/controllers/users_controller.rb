@@ -12,6 +12,12 @@ class UsersController < ApplicationController
   end
 
   def update
+    if @user.update_attributes(user_params)
+      flash[:success] = "#{@user.name}様の情報を更新しました。"
+      redirect_to users_url
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -21,5 +27,9 @@ class UsersController < ApplicationController
 
     def set_user
       @user = User.find(params[:id])
+    end
+
+    def user_params
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 end
