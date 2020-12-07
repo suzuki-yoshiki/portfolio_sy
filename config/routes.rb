@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'static_pages#top'
   get '/privacy', to: "users#privacy"
   devise_for :users, :controllers => {
@@ -6,6 +7,10 @@ Rails.application.routes.draw do
     :registrations => 'users/registrations',
     :sessions => 'users/sessions'   
   } 
+
+  get   'contact'         => 'contact#index'     # 入力画面
+  post  'contact/confirm' => 'contact#confirm'   # 確認画面
+  post  'contact/thanks'  => 'contact#thanks'    # 送信完了画面
   
   devise_scope :user do
     get "user/:id", :to => "users/registrations#detail"

@@ -1,4 +1,9 @@
-<h2>Log in</h2>
+<% provide(:title, "ログイン") %>
+<p id="notice"><%= notice %></p>
+
+<h1 class="new-title index-title-post">ログイン</h1>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -54,5 +59,6 @@
             <i class="fa fa-instagram"></i> Instagramでログイン
             <% end %>
         </div>
-
-<%= render "users/shared/links" %>
+      <%= render "devise/shared/links" %>
+ </div>
+</div>

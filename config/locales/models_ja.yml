@@ -1,0 +1,30 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      event: イベント
+    attributes:
+        user:
+          id: ID
+          name: 名前
+          kana: カナ
+          email: メールアドレス
+          address: 住所
+          password: パスワード
+          password_confirmation: パスワード再入力
+          created_at: 作成日
+          updated_at: 更新日
+        event:
+          id: ID
+          title: タイトル
+          body: 内容
+          start_date: 開始日時
+          end_date: 終了日時
+          created_at: 作成日
+          updated_at: 更新日
+        video:
+          id: ID
+          title: タイトル
+          youtube_url: YouTubeのurl
+          created_at: 作成日
+          updated_at: 更新日
